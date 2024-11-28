@@ -2,6 +2,8 @@
 
 The current project consists in ETL using logstash as data transfer and postgres as data source with opensearch container as data target.
 
+!['etl-logstash](./database/tables_pictures/etl_logstash.drawio.png)
+
 <hr>
 
 ## Load data in postgres

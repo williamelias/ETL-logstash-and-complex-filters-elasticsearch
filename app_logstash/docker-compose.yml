@@ -1,0 +1,17 @@
+
+version: '3'
+services:
+  logstash:
+    build: .
+    image: logstash_with_opensearch
+    container_name: logstash
+    env_file: .env
+    # volumes:
+    #   - ./pipeline/:/usr/share/logstash/pipeline/ 
+      # - ~/settings/:/usr/share/logstash/config/
+    networks:
+      - network1
+networks:
+  network1:
+    name: database_etl_logstash
+    external: true

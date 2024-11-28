@@ -11,10 +11,17 @@ services:
       - ./dump:/opt/dump
     env_file:
       - .db.env
+    
+    networks:
+      - etl_logstash
 
   adminer:
     image: adminer
     restart: always
     ports:
       - 8888:8080
+    networks:
+      - etl_logstash
 
+networks:
+  etl_logstash:
