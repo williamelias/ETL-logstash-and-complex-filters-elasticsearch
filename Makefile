@@ -1,6 +1,6 @@
 db_up:
 	docker compose -f database/docker-compose.yml build 
-	docker compose -f database/docker-compose.yml up
+	docker compose -f database/docker-compose.yml up -d
 
 db_down:
 	docker compose -f database/docker-compose.yml down
@@ -13,8 +13,8 @@ build_logstash:
 	docker compose -f app_logstash/docker-compose.yml build 
 
 etl_logstash:build_logstash
-	docker compose -f app_logstash/docker-compose.yml up 
+	docker compose -f app_logstash/docker-compose.yml up  -d
 
 opensearch_up:
 	docker compose -f app_opensearch/opensearch.compose.yml build 
-	docker compose -f app_opensearch/opensearch.compose.yml up
+	docker compose -f app_opensearch/opensearch.compose.yml up -d
