@@ -13,8 +13,8 @@ build_logstash:
 	docker compose -f app_logstash/docker-compose.yml build 
 
 etl_logstash:build_logstash
-	docker compose -f app_logstash/docker-compose.yml up  -d
+	docker compose -f app_logstash/docker-compose.yml up 
 
 opensearch_up:
 	docker compose -f app_opensearch/opensearch.compose.yml build 
-	docker compose -f app_opensearch/opensearch.compose.yml up -d
+	docker compose -f app_opensearch/opensearch.compose.yml up

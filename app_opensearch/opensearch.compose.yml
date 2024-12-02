@@ -3,12 +3,6 @@ services:
   opensearch-etl-node1:
     image: opensearchproject/opensearch:latest
     container_name: opensearch-etl-node1
-    environment:
-      - cluster.name=opensearch-cluster
-      - node.name=opensearch-etl-node1
-      - discovery.seed_hosts=opensearch-etl-node1
-      - cluster.initial_cluster_manager_nodes=opensearch-etl-node1
-      - bootstrap.memory_lock=true
     env_file:
       - .env
     ulimits:
